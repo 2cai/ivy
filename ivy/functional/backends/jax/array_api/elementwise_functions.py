@@ -53,3 +53,8 @@ def cos(x: JaxArray)\
 def logical_not(x: JaxArray)\
         -> JaxArray:
     return jnp.logical_not(x)
+
+def pow(x1: JaxArray, x2:JaxArray)\
+        -> JaxArray:
+    return jnp.power(x1,x2)
+

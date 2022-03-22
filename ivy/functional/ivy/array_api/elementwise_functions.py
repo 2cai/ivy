@@ -141,3 +141,23 @@ def logical_not(x: Union[ivy.Array, ivy.NativeArray])\
     :return: Boolean result of the logical NOT operation applied element-wise to x.
     """
     return _cur_framework(x).logical_not(x)
+
+
+def pow(x1: Union[ivy.Array, ivy.NativeArray],
+         x2: Union[ivy.Array, ivy.NativeArray])\
+        -> ivy.Array:
+    """
+    Computes the result array of power of x1 with x2
+
+    :param x1: Input array.
+    :type x1: array
+    :param x2: Input array or float.
+    :type x2: array or float
+    :param f: Machine learning framework. Inferred from inputs if None.
+    :type f: ml_framework, optional
+    :return: an resulting array of power of x1 with x2
+    """
+    return _cur_framework(x1,f=f).pow(x1,x2)   
+
+
+

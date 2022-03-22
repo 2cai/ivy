@@ -63,3 +63,7 @@ def cos(x: Tensor)\
 def logical_not(x: Tensor)\
         -> Tensor:
     return tf.logical_not(tf.cast(x, tf.bool))
+
+def pow(x1: Tensor,x2: Tensor)\
+        -> Tensor:
+    return tf.pow(x1,x2)
